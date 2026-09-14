@@ -10,10 +10,6 @@
 
     <style>
 
-        /* =========================
-           GENERAL
-        ========================= */
-
         * {
             box-sizing: border-box;
             margin: 0;
@@ -27,10 +23,7 @@
             line-height: 1.7;
         }
 
-
-        /* =========================
-           NAVIGATION
-        ========================= */
+        /* NAVIGATION */
 
         nav {
             background: #faf9f6;
@@ -68,10 +61,7 @@
             color: #789b89;
         }
 
-
-        /* =========================
-           HERO
-        ========================= */
+        /* HERO */
 
         .hero {
             max-width: 1100px;
@@ -108,29 +98,18 @@
             color: #465750;
         }
 
+        /* PHOTO */
 
-        /* =========================
-           PHOTO
-        ========================= */
-
-        .photo-placeholder {
+        .photo {
             width: 280px;
             height: 350px;
-            background: #e6ebe6;
-            border: 1px solid #ccd6cf;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #789080;
-            font-family: Aptos, "Aptos Display", Arial, sans-serif;
-            font-size: 0.9rem;
+            object-fit: cover;
+            display: block;
             margin: auto;
+            border: 1px solid #ccd6cf;
         }
 
-
-        /* =========================
-           BUTTONS
-        ========================= */
+        /* BUTTONS */
 
         .links {
             margin-top: 30px;
@@ -155,10 +134,7 @@
             color: white;
         }
 
-
-        /* =========================
-           SECTIONS
-        ========================= */
+        /* SECTIONS */
 
         section {
             padding: 80px 8%;
@@ -191,10 +167,7 @@
             margin-top: 12px;
         }
 
-
-        /* =========================
-           RESEARCH
-        ========================= */
+        /* RESEARCH */
 
         .research-grid {
             display: grid;
@@ -226,10 +199,7 @@
             color: #596861;
         }
 
-
-        /* =========================
-           PUBLICATIONS
-        ========================= */
+        /* PUBLICATIONS */
 
         .publication {
             padding: 25px 0;
@@ -258,10 +228,7 @@
             color: #687b72;
         }
 
-
-        /* =========================
-           PROJECTS
-        ========================= */
+        /* PROJECTS */
 
         .project {
             margin-bottom: 35px;
@@ -279,10 +246,7 @@
             color: #465750;
         }
 
-
-        /* =========================
-           CONTACT
-        ========================= */
+        /* CONTACT */
 
         .contact {
             text-align: center;
@@ -303,10 +267,33 @@
             color: #789b89;
         }
 
+        /* ACADEMIC LINKS */
 
-        /* =========================
-           FOOTER
-        ========================= */
+        .academic-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .academic-link {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #789b89;
+            color: #405e50;
+            text-decoration: none;
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+
+        .academic-link:hover {
+            background: #405e50;
+            color: white;
+        }
+
+        /* FOOTER */
 
         footer {
             text-align: center;
@@ -317,10 +304,7 @@
             font-size: 0.8rem;
         }
 
-
-        /* =========================
-           MOBILE
-        ========================= */
+        /* MOBILE */
 
         @media (max-width: 800px) {
 
@@ -361,7 +345,7 @@
                 font-size: 1rem;
             }
 
-            .photo-placeholder {
+            .photo {
                 width: 240px;
                 height: 300px;
             }
@@ -374,9 +358,7 @@
 <body>
 
 
-<!-- =========================
-     NAVIGATION
-========================= -->
+<!-- NAVIGATION -->
 
 <nav>
 
@@ -411,9 +393,7 @@
 </nav>
 
 
-<!-- =========================
-     HERO
-========================= -->
+<!-- HERO -->
 
 <header class="hero">
 
@@ -428,4 +408,391 @@
             Postdoctoral Researcher · Psycholinguistics ·
             Music Cognition · Cognitive Neuroscience
         </h2>
+
+        <p>
+            I investigate how bilinguals integrate emotional,
+            social, and contextual information during language
+            comprehension, with a particular interest in the
+            interaction between language, emotion, and sound.
+        </p>
+
+
+        <div class="links">
+
+            <a
+                class="button"
+                href="CV_Andrea_Gonzalez_Garcia_Aldariz.pdf"
+                target="_blank">
+                CV
+            </a>
+
+            <a
+                class="button"
+                href="#publications">
+                Publications
+            </a>
+
+            <a
+                class="button"
+                href="#research">
+                Research
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <img
+            src="andrea-photo.jpg"
+            alt="Andrea González García Aldariz"
+            class="photo">
+
+    </div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-inner">
+
+        <h2 class="section-title">
+            About
+        </h2>
+
+        <p>
+            I am a Postdoctoral Researcher at Nebrija University
+            in Madrid, Spain. My research examines how bilinguals
+            process emotional, social, and contextual information
+            during language comprehension.
+        </p>
+
+        <br>
+
+        <p>
+            My work combines psycholinguistic and neuroscientific
+            methods, including EEG/ERP, behavioural experimentation,
+            and computational analysis. I am also interested in the
+            intersection between language and music cognition.
+        </p>
+
+        <br>
+
+        <p>
+            Alongside my research, I teach Music Education,
+            supervise undergraduate research, and co-organise
+            the Linguistic Break seminar series.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- RESEARCH -->
+
+<section id="research">
+
+    <div class="section-inner">
+
+        <h2 class="section-title">
+            Research
+        </h2>
+
+        <div class="research-grid">
+
+            <div class="research-card">
+
+                <h3>
+                    Language &amp; Emotion
+                </h3>
+
+                <p>
+                    How do bilinguals process emotional meaning
+                    in a second language?
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Bilingualism
+                </h3>
+
+                <p>
+                    How does using a second language influence
+                    real-time language comprehension?
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Social Meaning
+                </h3>
+
+                <p>
+                    How do listeners integrate information about
+                    other people's emotions, intentions, and
+                    social states?
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Music &amp; Language
+                </h3>
+
+                <p>
+                    How do linguistic and musical information
+                    interact during cognitive processing?
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PUBLICATIONS -->
+
+<section id="publications">
+
+    <div class="section-inner">
+
+        <h2 class="section-title">
+            Selected Publications
+        </h2>
+
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2025
+            </div>
+
+            <div class="publication-title">
+                González-García Aldariz, A., Moreno, E., &amp; Foucart, A.
+                “How do they feel?” Processing others’ emotions in
+                second language discourse.
+            </div>
+
+            <div class="publication-journal">
+                Language Learning
+            </div>
+
+        </div>
+
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2024
+            </div>
+
+            <div class="publication-title">
+                González-García Aldariz, A., Moreno, E., &amp; Foucart, A.
+                “Beyond the literal meaning”: Processing implied emotion
+                in second language discourse — an ERP study.
+            </div>
+
+            <div class="publication-journal">
+                Language, Cognition and Neuroscience,
+                39(8), 1090–1096.
+            </div>
+
+        </div>
+
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2023
+            </div>
+
+            <div class="publication-title">
+                González-García Aldariz, A., Rodríguez-Gómez, P.,
+                Romero-Rivas, C., Rodríguez-Cuadrado, S., Foucart, A.,
+                &amp; Moreno, E. “Good for you!” Processing social emotions
+                in L2 discourse comprehension — an ERP study.
+            </div>
+
+            <div class="publication-journal">
+                Bilingualism: Language and Cognition,
+                26(2), 440–445.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="section-inner">
+
+        <h2 class="section-title">
+            Current Research Projects
+        </h2>
+
+
+        <div class="project">
+
+            <h3>
+                MULTIPRAG
+            </h3>
+
+            <p>
+                Neuro-cognitive processes of multilingual communication:
+                integration of pragmatic information during second language
+                and foreign-accented speech comprehension.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>PI:</strong>
+                Alice Foucart · Nebrija University
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>
+                NEUROSYNC
+            </h3>
+
+            <p>
+                Neural mechanisms of human communication:
+                brain synchronization in first and second language.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>PI:</strong>
+                Alice Foucart · Nebrija University
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>
+                FPU20/06880
+            </h3>
+
+            <p>
+                Emotion processing during social interaction in a
+                second language. Doctoral research project,
+                Nebrija University.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="section-inner contact">
+
+        <h2 class="section-title">
+            Contact
+        </h2>
+
+        <p>
+            Andrea González García Aldariz
+        </p>
+
+        <p>
+            Postdoctoral Researcher
+        </p>
+
+        <p>
+            Nebrija University · Madrid, Spain
+        </p>
+
+        <br>
+
+        <p>
+            <a href="mailto:andraldariz@hotmail.com">
+                andraldariz@hotmail.com
+            </a>
+        </p>
+
+        <p>
+            <a href="mailto:andreaoboe.96@gmail.com">
+                andreaoboe.96@gmail.com
+            </a>
+        </p>
+
+
+        <!-- ACADEMIC PROFILES -->
+
+        <div class="academic-links">
+
+            <a
+                class="academic-link"
+                href="https://orcid.org/0000-0003-0395-4064"
+                target="_blank"
+                rel="noopener noreferrer">
+                ORCID
+            </a>
+
+
+            <a
+                class="academic-link"
+                href="https://scholar.google.com/citations?user=IIt0I78AAAAJ&hl=es"
+                target="_blank"
+                rel="noopener noreferrer">
+                Google Scholar
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Andrea González García Aldariz
+
+</footer>
+
+
+</body>
+
+</html>
 ```
+
