@@ -152,13 +152,9 @@
 
         .section-title::after {
             content: "";
-            display: block;
-            width: 45px;
-            height: 3px;
-            background: #e67e22;
-            margin-top: 12px;
+            display: none;
+            
         }
-
 
         /* ABOUT */
 
@@ -266,26 +262,27 @@
             color: #405568;
         }
 
-
         /* CONTACT */
-
+        
         .contact {
             text-align: center;
         }
-
+        
         .contact p {
             margin-bottom: 10px;
         }
-
+        
         .contact a {
             color: #315b82;
             text-decoration: none;
             border-bottom: 1px solid #e67e22;
-            transition: color 0.2s ease;
+            padding-bottom: 2px;
+            transition: color 0.2s ease, border-color 0.2s ease;
         }
-
+        
         .contact a:hover {
             color: #e67e22;
+            border-color: #e67e22;
         }
 
 
