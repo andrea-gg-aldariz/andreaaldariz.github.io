@@ -1,0 +1,797 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Andrea González García Aldariz</title>
+
+    <style>
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            background: #faf9f6;
+            color: #26332f;
+            line-height: 1.7;
+        }
+
+        /* NAVIGATION */
+
+        nav {
+            background: #faf9f6;
+            border-bottom: 1px solid #d9ded9;
+            padding: 22px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-name {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #28483d;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 28px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #40534d;
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            font-size: 0.9rem;
+            transition: color 0.2s ease;
+        }
+
+        nav a:hover {
+            color: #789b89;
+        }
+
+        /* HERO */
+
+        .hero {
+            max-width: 1100px;
+            margin: auto;
+            padding: 100px 8% 90px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr;
+            gap: 70px;
+            align-items: center;
+        }
+
+        .hero h1 {
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            font-size: 3.2rem;
+            font-weight: 600;
+            line-height: 1.15;
+            color: #28483d;
+            margin-bottom: 20px;
+            letter-spacing: -1px;
+        }
+
+        .hero h2 {
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            font-size: 1.15rem;
+            font-weight: 400;
+            color: #687b72;
+            margin-bottom: 28px;
+            line-height: 1.5;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 650px;
+            color: #465750;
+        }
+
+        /* PHOTO */
+
+        .photo {
+            width: 280px;
+            height: 350px;
+            object-fit: cover;
+            display: block;
+            margin: auto;
+            border: 1px solid #ccd6cf;
+        }
+
+        /* BUTTONS */
+
+        .links {
+            margin-top: 30px;
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .button {
+            display: inline-block;
+            padding: 10px 20px;
+            border: 1px solid #789b89;
+            color: #405e50;
+            text-decoration: none;
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+
+        .button:hover {
+            background: #405e50;
+            color: white;
+        }
+
+        /* SECTIONS */
+
+        section {
+            padding: 80px 8%;
+        }
+
+        .section-inner {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        section:nth-child(even) {
+            background: #f0f3ef;
+        }
+
+        .section-title {
+            color: #28483d;
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 35px;
+            letter-spacing: -0.3px;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 45px;
+            height: 2px;
+            background: #789b89;
+            margin-top: 12px;
+        }
+
+        /* RESEARCH */
+
+        .research-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+
+        .research-card {
+            background: #faf9f6;
+            border: 1px solid #d9ded9;
+            padding: 30px;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .research-card:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(40, 72, 61, 0.08);
+        }
+
+        .research-card h3 {
+            color: #405e50;
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .research-card p {
+            color: #596861;
+        }
+
+        /* PUBLICATIONS */
+
+        .publication {
+            padding: 25px 0;
+            border-bottom: 1px solid #d9ded9;
+        }
+
+        .publication:last-child {
+            border-bottom: none;
+        }
+
+        .publication-year {
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            color: #789b89;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+
+        .publication-title {
+            font-size: 1.05rem;
+            margin: 5px 0;
+            color: #34443e;
+        }
+
+        .publication-journal {
+            font-style: italic;
+            color: #687b72;
+        }
+
+        /* PROJECTS */
+
+        .project {
+            margin-bottom: 35px;
+        }
+
+        .project h3 {
+            color: #405e50;
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .project p {
+            color: #465750;
+        }
+
+        /* CONTACT */
+
+        .contact {
+            text-align: center;
+        }
+
+        .contact p {
+            margin-bottom: 10px;
+        }
+
+        .contact a {
+            color: #405e50;
+            text-decoration: none;
+            border-bottom: 1px solid #789b89;
+            transition: color 0.2s ease;
+        }
+
+        .contact a:hover {
+            color: #789b89;
+        }
+
+        /* ACADEMIC LINKS */
+
+        .academic-links {
+            margin-top: 25px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .academic-link {
+            display: inline-block;
+            padding: 9px 18px;
+            border: 1px solid #789b89;
+            color: #405e50;
+            text-decoration: none;
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            font-size: 0.85rem;
+            transition: all 0.2s ease;
+        }
+
+        .academic-link:hover {
+            background: #405e50;
+            color: white;
+        }
+
+        /* FOOTER */
+
+        footer {
+            text-align: center;
+            padding: 35px;
+            background: #28483d;
+            color: #e8eee9;
+            font-family: Aptos, "Aptos Display", Arial, sans-serif;
+            font-size: 0.8rem;
+        }
+
+        /* MOBILE */
+
+        @media (max-width: 800px) {
+
+            nav {
+                flex-direction: column;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                text-align: center;
+                padding-top: 60px;
+            }
+
+            .hero p {
+                margin: auto;
+            }
+
+            .links {
+                justify-content: center;
+            }
+
+            .research-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 2.6rem;
+            }
+
+            .hero h2 {
+                font-size: 1rem;
+            }
+
+            .photo {
+                width: 240px;
+                height: 300px;
+            }
+        }
+
+    </style>
+</head>
+
+
+<body>
+
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="nav-name">
+        Andrea González García Aldariz
+    </div>
+
+    <ul>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#research">Research</a>
+        </li>
+
+        <li>
+            <a href="#publications">Publications</a>
+        </li>
+
+        <li>
+            <a href="#projects">Projects</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+    </ul>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div>
+
+        <h1>
+            Andrea González<br>
+            García Aldariz
+        </h1>
+
+        <h2>
+            Postdoctoral Researcher · Psycholinguistics ·
+            Music Cognition · Cognitive Neuroscience
+        </h2>
+
+        <p>
+            I investigate how bilinguals integrate emotional,
+            social, and contextual information during language
+            comprehension, with a particular interest in the
+            interaction between language, emotion, and sound.
+        </p>
+
+
+        <div class="links">
+
+            <a
+                class="button"
+                href="CV_Andrea_Gonzalez_Garcia_Aldariz.pdf"
+                target="_blank">
+                CV
+            </a>
+
+            <a
+                class="button"
+                href="#publications">
+                Publications
+            </a>
+
+            <a
+                class="button"
+                href="#research">
+                Research
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div>
+
+        <img
+            src="andrea-photo.jpg"
+            alt="Andrea González García Aldariz"
+            class="photo">
+
+    </div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+
+    <div class="section-inner">
+
+        <h2 class="section-title">
+            About
+        </h2>
+
+        <p>
+            I am a Postdoctoral Researcher at Nebrija University
+            in Madrid, Spain. My research examines how bilinguals
+            process emotional, social, and contextual information
+            during language comprehension.
+        </p>
+
+        <br>
+
+        <p>
+            My work combines psycholinguistic and neuroscientific
+            methods, including EEG/ERP, behavioural experimentation,
+            and computational analysis. I am also interested in the
+            intersection between language and music cognition.
+        </p>
+
+        <br>
+
+        <p>
+            Alongside my research, I teach Music Education,
+            supervise undergraduate research, and co-organise
+            the Linguistic Break seminar series.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- RESEARCH -->
+
+<section id="research">
+
+    <div class="section-inner">
+
+        <h2 class="section-title">
+            Research
+        </h2>
+
+        <div class="research-grid">
+
+            <div class="research-card">
+
+                <h3>
+                    Language &amp; Emotion
+                </h3>
+
+                <p>
+                    How do bilinguals process emotional meaning
+                    in a second language?
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Bilingualism
+                </h3>
+
+                <p>
+                    How does using a second language influence
+                    real-time language comprehension?
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Social Meaning
+                </h3>
+
+                <p>
+                    How do listeners integrate information about
+                    other people's emotions, intentions, and
+                    social states?
+                </p>
+
+            </div>
+
+
+            <div class="research-card">
+
+                <h3>
+                    Music &amp; Language
+                </h3>
+
+                <p>
+                    How do linguistic and musical information
+                    interact during cognitive processing?
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PUBLICATIONS -->
+
+<section id="publications">
+
+    <div class="section-inner">
+
+        <h2 class="section-title">
+            Selected Publications
+        </h2>
+
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2025
+            </div>
+
+            <div class="publication-title">
+                González-García Aldariz, A., Moreno, E., &amp; Foucart, A.
+                “How do they feel?” Processing others’ emotions in
+                second language discourse.
+            </div>
+
+            <div class="publication-journal">
+                Language Learning
+            </div>
+
+        </div>
+
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2024
+            </div>
+
+            <div class="publication-title">
+                González-García Aldariz, A., Moreno, E., &amp; Foucart, A.
+                “Beyond the literal meaning”: Processing implied emotion
+                in second language discourse — an ERP study.
+            </div>
+
+            <div class="publication-journal">
+                Language, Cognition and Neuroscience,
+                39(8), 1090–1096.
+            </div>
+
+        </div>
+
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2023
+            </div>
+
+            <div class="publication-title">
+                González-García Aldariz, A., Rodríguez-Gómez, P.,
+                Romero-Rivas, C., Rodríguez-Cuadrado, S., Foucart, A.,
+                &amp; Moreno, E. “Good for you!” Processing social emotions
+                in L2 discourse comprehension — an ERP study.
+            </div>
+
+            <div class="publication-journal">
+                Bilingualism: Language and Cognition,
+                26(2), 440–445.
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- PROJECTS -->
+
+<section id="projects">
+
+    <div class="section-inner">
+
+        <h2 class="section-title">
+            Current Research Projects
+        </h2>
+
+
+        <div class="project">
+
+            <h3>
+                MULTIPRAG
+            </h3>
+
+            <p>
+                Neuro-cognitive processes of multilingual communication:
+                integration of pragmatic information during second language
+                and foreign-accented speech comprehension.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>PI:</strong>
+                Alice Foucart · Nebrija University
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>
+                NEUROSYNC
+            </h3>
+
+            <p>
+                Neural mechanisms of human communication:
+                brain synchronization in first and second language.
+            </p>
+
+            <br>
+
+            <p>
+                <strong>PI:</strong>
+                Alice Foucart · Nebrija University
+            </p>
+
+        </div>
+
+
+        <div class="project">
+
+            <h3>
+                FPU20/06880
+            </h3>
+
+            <p>
+                Emotion processing during social interaction in a
+                second language. Doctoral research project,
+                Nebrija University.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+
+    <div class="section-inner contact">
+
+        <h2 class="section-title">
+            Contact
+        </h2>
+
+        <p>
+            Andrea González García Aldariz
+        </p>
+
+        <p>
+            Postdoctoral Researcher
+        </p>
+
+        <p>
+            Nebrija University · Madrid, Spain
+        </p>
+
+        <br>
+
+        <p>
+            <a href="mailto:andraldariz@hotmail.com">
+                andraldariz@hotmail.com
+            </a>
+        </p>
+
+        <p>
+            <a href="mailto:andreaoboe.96@gmail.com">
+                andreaoboe.96@gmail.com
+            </a>
+        </p>
+
+
+        <!-- ACADEMIC PROFILES -->
+
+        <div class="academic-links">
+
+            <a
+                class="academic-link"
+                href="https://orcid.org/0000-0003-0395-4064"
+                target="_blank"
+                rel="noopener noreferrer">
+                ORCID
+            </a>
+
+
+            <a
+                class="academic-link"
+                href="https://scholar.google.com/citations?user=IIt0I78AAAAJ&hl=es"
+                target="_blank"
+                rel="noopener noreferrer">
+                Google Scholar
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+    © 2026 Andrea González García Aldariz
+
+</footer>
+
+
+</body>
+
+</html>
+```
