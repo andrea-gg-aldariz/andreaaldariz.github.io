@@ -3,6 +3,7 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -22,6 +23,7 @@
             color: #263746;
             line-height: 1.7;
         }
+
 
         /* NAVIGATION */
 
@@ -52,7 +54,6 @@
         nav a {
             text-decoration: none;
             color: #315b82;
-            font-family: Aptos, "Aptos Display", Arial, sans-serif;
             font-size: 0.9rem;
             transition: color 0.2s ease;
         }
@@ -61,25 +62,23 @@
             color: #e67e22;
         }
 
+
         /* HERO */
 
         .hero {
-            max-width: 1100px;
+            max-width: 1000px;
             margin: auto;
-            padding: 100px 8% 90px;
-            display: grid;
-            grid-template-columns: 1.5fr 1fr;
-            gap: 70px;
-            align-items: center;
+            padding: 110px 8% 100px;
+            text-align: center;
         }
 
         .hero h1 {
             font-family: Aptos, "Aptos Display", Arial, sans-serif;
-            font-size: 3.2rem;
+            font-size: 3.4rem;
             font-weight: 600;
             line-height: 1.15;
             color: #17365d;
-            margin-bottom: 20px;
+            margin-bottom: 18px;
             letter-spacing: -1px;
         }
 
@@ -94,26 +93,18 @@
 
         .hero p {
             font-size: 1.1rem;
-            max-width: 650px;
+            max-width: 720px;
+            margin: auto;
             color: #405568;
         }
 
-        /* PHOTO */
-
-        .photo {
-            width: 280px;
-            height: 350px;
-            object-fit: cover;
-            display: block;
-            margin: auto;
-            border: 2px solid #e67e22;
-        }
 
         /* BUTTONS */
 
         .links {
-            margin-top: 30px;
+            margin-top: 32px;
             display: flex;
+            justify-content: center;
             gap: 12px;
             flex-wrap: wrap;
         }
@@ -124,7 +115,6 @@
             border: 1px solid #315b82;
             color: #315b82;
             text-decoration: none;
-            font-family: Aptos, "Aptos Display", Arial, sans-serif;
             font-size: 0.85rem;
             transition: all 0.2s ease;
         }
@@ -134,6 +124,7 @@
             border-color: #e67e22;
             color: white;
         }
+
 
         /* SECTIONS */
 
@@ -146,7 +137,7 @@
             margin: auto;
         }
 
-        section:nth-child(even) {
+        section:nth-of-type(even) {
             background: #eef4f8;
         }
 
@@ -167,6 +158,18 @@
             background: #e67e22;
             margin-top: 12px;
         }
+
+
+        /* ABOUT */
+
+        .about-text {
+            max-width: 850px;
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+        }
+
 
         /* RESEARCH */
 
@@ -191,7 +194,6 @@
 
         .research-card h3 {
             color: #315b82;
-            font-family: Aptos, "Aptos Display", Arial, sans-serif;
             font-size: 1.15rem;
             font-weight: 600;
             margin-bottom: 10px;
@@ -200,6 +202,7 @@
         .research-card p {
             color: #526879;
         }
+
 
         /* PUBLICATIONS */
 
@@ -213,22 +216,38 @@
         }
 
         .publication-year {
-            font-family: Aptos, "Aptos Display", Arial, sans-serif;
             color: #e67e22;
             font-size: 0.9rem;
             font-weight: 600;
+            margin-bottom: 5px;
         }
 
         .publication-title {
             font-size: 1.05rem;
-            margin: 5px 0;
             color: #344b60;
+            margin-bottom: 6px;
         }
 
         .publication-journal {
             font-style: italic;
             color: #61788c;
+            margin-bottom: 8px;
         }
+
+        .doi {
+            font-size: 0.85rem;
+        }
+
+        .doi a {
+            color: #315b82;
+            text-decoration: none;
+            border-bottom: 1px solid #e67e22;
+        }
+
+        .doi a:hover {
+            color: #e67e22;
+        }
+
 
         /* PROJECTS */
 
@@ -238,7 +257,6 @@
 
         .project h3 {
             color: #315b82;
-            font-family: Aptos, "Aptos Display", Arial, sans-serif;
             font-size: 1.2rem;
             font-weight: 600;
             margin-bottom: 8px;
@@ -247,6 +265,7 @@
         .project p {
             color: #405568;
         }
+
 
         /* CONTACT */
 
@@ -269,6 +288,7 @@
             color: #e67e22;
         }
 
+
         /* ACADEMIC LINKS */
 
         .academic-links {
@@ -285,7 +305,6 @@
             border: 1px solid #315b82;
             color: #315b82;
             text-decoration: none;
-            font-family: Aptos, "Aptos Display", Arial, sans-serif;
             font-size: 0.85rem;
             transition: all 0.2s ease;
         }
@@ -296,6 +315,7 @@
             color: white;
         }
 
+
         /* FOOTER */
 
         footer {
@@ -303,9 +323,9 @@
             padding: 35px;
             background: #17365d;
             color: #e8f0f6;
-            font-family: Aptos, "Aptos Display", Arial, sans-serif;
             font-size: 0.8rem;
         }
+
 
         /* MOBILE */
 
@@ -323,21 +343,8 @@
             }
 
             .hero {
-                grid-template-columns: 1fr;
-                text-align: center;
-                padding-top: 60px;
-            }
-
-            .hero p {
-                margin: auto;
-            }
-
-            .links {
-                justify-content: center;
-            }
-
-            .research-grid {
-                grid-template-columns: 1fr;
+                padding-top: 70px;
+                padding-bottom: 70px;
             }
 
             .hero h1 {
@@ -348,13 +355,14 @@
                 font-size: 1rem;
             }
 
-            .photo {
-                width: 240px;
-                height: 300px;
+            .research-grid {
+                grid-template-columns: 1fr;
             }
+
         }
 
     </style>
+
 </head>
 
 
@@ -400,48 +408,42 @@
 
 <header class="hero">
 
-    <div>
+    <h1>
+        Andrea González García Aldariz
+    </h1>
 
-        <h1>
-            Andrea González<br>
-            García Aldariz
-        </h1>
+    <h2>
+        Postdoctoral Researcher · Psycholinguistics · Music Cognition · Cognitive Neuroscience
+    </h2>
 
-        <h2>
-            Postdoctoral Researcher · Psycholinguistics ·
-            Music Cognition · Cognitive Neuroscience
-        </h2>
-
-        <p>
-            I investigate how bilinguals integrate emotional,
-            social, and contextual information during language
-            comprehension, with a particular interest in the
-            interaction between language, emotion, and sound.
-        </p>
+    <p>
+        I investigate how bilinguals integrate emotional,
+        social, and contextual information during language
+        comprehension, with a particular interest in the
+        interaction between language, emotion, and sound.
+    </p>
 
 
-        <div class="links">
+    <div class="links">
 
-            <a
-                class="button"
-                href="CV_Andrea_Gonzalez_Garcia_Aldariz.pdf"
-                target="_blank">
-                CV
-            </a>
+        <a
+            class="button"
+            href="CV_Andrea_Gonzalez_Garcia_Aldariz.pdf"
+            target="_blank">
+            CV
+        </a>
 
-            <a
-                class="button"
-                href="#publications">
-                Publications
-            </a>
+        <a
+            class="button"
+            href="#publications">
+            Publications
+        </a>
 
-            <a
-                class="button"
-                href="#research">
-                Research
-            </a>
-
-        </div>
+        <a
+            class="button"
+            href="#research">
+            Research
+        </a>
 
     </div>
 
@@ -452,7 +454,7 @@
 
 <section id="about">
 
-    <div class="section-inner">
+    <div class="section-inner about-text">
 
         <h2 class="section-title">
             About
@@ -465,16 +467,12 @@
             during language comprehension.
         </p>
 
-        <br>
-
         <p>
             My work combines psycholinguistic and neuroscientific
             methods, including EEG/ERP, behavioural experimentation,
             and computational analysis. I am also interested in the
             intersection between language and music cognition.
         </p>
-
-        <br>
 
         <p>
             Alongside my research, I teach Music Education,
@@ -573,24 +571,40 @@
         </h2>
 
 
+        <!-- 2026 -->
+
         <div class="publication">
 
             <div class="publication-year">
-                2025
+                2026
             </div>
 
             <div class="publication-title">
+
                 González-García Aldariz, A., Moreno, E., &amp; Foucart, A.
                 “How do they feel?” Processing others’ emotions in
                 second language discourse.
+
             </div>
 
             <div class="publication-journal">
-                Language Learning
+                Language Learning, 76, 808–844.
+            </div>
+
+            <div class="doi">
+                DOI:
+                <a
+                    href="https://doi.org/10.1111/lang.70016"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    10.1111/lang.70016
+                </a>
             </div>
 
         </div>
 
+
+        <!-- 2024 -->
 
         <div class="publication">
 
@@ -599,18 +613,36 @@
             </div>
 
             <div class="publication-title">
+
                 González-García Aldariz, A., Moreno, E., &amp; Foucart, A.
                 “Beyond the literal meaning”: Processing implied emotion
                 in second language discourse — an ERP study.
+
             </div>
 
             <div class="publication-journal">
+
                 Language, Cognition and Neuroscience,
                 39(8), 1090–1096.
+
+            </div>
+
+            <div class="doi">
+
+                DOI:
+                <a
+                    href="https://doi.org/10.1080/23273798.2024.2385012"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    10.1080/23273798.2024.2385012
+                </a>
+
             </div>
 
         </div>
 
+
+        <!-- 2023 -->
 
         <div class="publication">
 
@@ -619,18 +651,72 @@
             </div>
 
             <div class="publication-title">
+
                 González-García Aldariz, A., Rodríguez-Gómez, P.,
                 Romero-Rivas, C., Rodríguez-Cuadrado, S., Foucart, A.,
                 &amp; Moreno, E. “Good for you!” Processing social emotions
                 in L2 discourse comprehension — an ERP study.
+
             </div>
 
             <div class="publication-journal">
+
                 Bilingualism: Language and Cognition,
                 26(2), 440–445.
+
+            </div>
+
+            <div class="doi">
+
+                DOI:
+                <a
+                    href="https://doi.org/10.1017/S1366728922000633"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    10.1017/S1366728922000633
+                </a>
+
             </div>
 
         </div>
+
+
+        <!-- 2023 Brain Sciences -->
+
+        <div class="publication">
+
+            <div class="publication-year">
+                2023
+            </div>
+
+            <div class="publication-title">
+
+                Scrimshire, C., Amador, S., González-García Aldariz, A.,
+                Meza, G., &amp; Gómez, P. An evidence accumulation account
+                of masked translation priming in two bilingual populations.
+
+            </div>
+
+            <div class="publication-journal">
+
+                Brain Sciences, 13(7), 1066.
+
+            </div>
+
+            <div class="doi">
+
+                DOI:
+                <a
+                    href="https://doi.org/10.3390/brainsci13071066"
+                    target="_blank"
+                    rel="noopener noreferrer">
+                    10.3390/brainsci13071066
+                </a>
+
+            </div>
+
+        </div>
+
 
     </div>
 
@@ -788,4 +874,3 @@
 
 </html>
 ```
-
