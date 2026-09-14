@@ -67,8 +67,20 @@
         .hero {
             max-width: 1000px;
             margin: auto;
-            padding: 110px 8% 100px;
+            padding: 90px 8% 100px;
             text-align: center;
+        }
+
+        /* PROFILE PHOTO */
+
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 30px;
+            border: 3px solid #d6e0e8;
         }
 
         .hero h1 {
@@ -152,8 +164,8 @@
         .section-title::after {
             content: "";
             display: none;
-            
         }
+
 
         /* ABOUT */
 
@@ -261,16 +273,17 @@
             color: #405568;
         }
 
+
         /* CONTACT */
-        
+
         .contact {
             text-align: center;
         }
-        
+
         .contact p {
             margin-bottom: 10px;
         }
-        
+
         .contact a {
             color: #315b82;
             text-decoration: none;
@@ -278,7 +291,7 @@
             padding-bottom: 2px;
             transition: color 0.2s ease, border-color 0.2s ease;
         }
-        
+
         .contact a:hover {
             color: #e67e22;
             border-color: #e67e22;
@@ -351,6 +364,11 @@
                 font-size: 1rem;
             }
 
+            .profile-photo {
+                width: 125px;
+                height: 125px;
+            }
+
             .research-grid {
                 grid-template-columns: 1fr;
             }
@@ -404,6 +422,12 @@
 
 <header class="hero">
 
+    <!-- PROFILE PHOTO -->
+    <img
+        src="andrea-photo.jpeg"
+        alt="Andrea González García Aldariz"
+        class="profile-photo">
+
     <h1>
         Andrea González García Aldariz
     </h1>
@@ -441,6 +465,14 @@
             Research
         </a>
 
+        <a
+            class="button"
+            href="https://github.com/andrea-gg-aldariz"
+            target="_blank"
+            rel="noopener noreferrer">
+            GitHub
+        </a>
+
     </div>
 
 </header>
@@ -464,13 +496,13 @@
         </p>
 
         <p>
-            My work combines psycholinguistic methods, including EEG/ERP 
-            and behavioural experimentation. I am also interested in the 
+            My work combines psycholinguistic methods, including EEG/ERP
+            and behavioural experimentation. I am also interested in the
             intersection between language and music cognition.
         </p>
 
         <p>
-            Alongside research, I teach Music Education, 
+            Alongside research, I teach Music Education,
             supervise undergraduate research.
         </p>
 
